@@ -1,0 +1,11 @@
+{
+  "name": "advent-of-code-22",
+  "version": "1.0.0",
+  "description": "",
+  "main": "common.js",
+  "scripts": {
+    "solution": "mkdir $DIR && cp __template/solution.js __template/input.txt $DIR"
+  },
+  "author": "",
+  "license": "ISC"
+}
