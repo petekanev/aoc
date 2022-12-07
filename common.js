@@ -34,9 +34,31 @@ const uniq = (arr) => {
     });
 };
 
+const sortObject = (obj) => {
+    return Object.keys(obj)
+        .sort()
+        .reduce((accumulator, key) => {
+            accumulator[key] = obj[key];
+
+            return accumulator;
+        }, {});
+}
+
+const filterObject = (obj, predicate) => {
+    return Object.keys(obj).reduce((accumulator, key) => {
+        if (predicate(obj[key])) {
+            accumulator[key] = obj[key];
+        }
+
+        return accumulator;
+      }, {});
+}
+
 module.exports = {
     readInput,
     intersection,
     range,
-    uniq
+    uniq,
+    sortObject,
+    filterObject
 }
